@@ -31,7 +31,7 @@ describe('Graphql', () => {
                 expect(response.body.data.users[0]).to.have.property('email');
                 expect(response.body.data.users[0]).to.have.property('phone');
             }
-            
+
             done();
         })
     });

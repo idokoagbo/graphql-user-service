@@ -47,9 +47,7 @@ async function generateToken(user) {
     // send email
     const body = `<p> <b>Account Verification</b></p> <p>Howdy ${user.name},</p> <p>Thank you for choosing ${process.env.APP_NAME}! <br/>Please confirm your email address by clicking the link below. We'll communicate important updates with you from time to time via email, so it's essential that we have an up-to-date email address on file.</p> <center><a href='${process.env.APP_URL}?email=${user.email}&token=${newToken}' style='text-decoration:none;color:#ffffff;font-size:18px; line-height: 24px; display:block;background-color:#0275d8;padding:10px'>Verify your email address</a></center>`;
 
-    return mailer.send(user.email, `Hi ${user.name}, Please verify your ${process.env.APP_NAME} account`, body).then((result) => {
-        return verificationToken;
-    });
+    return mailer.send(user.email, `Hi ${user.name}, Please verify your ${process.env.APP_NAME} account`, body).then((_) => verificationToken);
 }
 
 const resolvers = {

@@ -7,9 +7,9 @@ const userSchema = mongoose.Schema({
     phone: String,
     country: String,
     password: String,
-    isVerified: {type: Boolean, default: false},
-    createdAt: {type: Date, default: Date.now},
-    updatedAt: {type: Date, default: Date.now}
+    isVerified: { type: Boolean, default: false },
+    createdAt: { type: Date, default: Date.now },
+    updatedAt: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model('User', userSchema);
