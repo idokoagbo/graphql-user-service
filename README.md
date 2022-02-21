@@ -2,7 +2,7 @@
 A simple graphQL user service 
 
 
-# Install nodejs globally: https://nodejs.org/en/download/
+Install nodejs globally: https://nodejs.org/en/download/
 
 # Install local dependencies
 $ npm install
