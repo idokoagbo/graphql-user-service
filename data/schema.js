@@ -15,7 +15,9 @@ type User {
 }
 
 type Query {
+    "Returns currently signed in user"
     user: User!
+    "Returns all users"
     users: [User!]
 }
 
