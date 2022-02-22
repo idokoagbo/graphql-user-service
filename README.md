@@ -12,3 +12,8 @@ $ cp .env.example .env
 
 # Spin up development environment
 $ npm start
+
+
+Apollo Server 3 removes GraphQL Playground (and its associated constructor option) in favor of a landing page that links to Apollo Sandbox in non-production environments. In production, it serves a simplified landing page instead.
+
+https://studio.apollographql.com/sandbox/explorer
