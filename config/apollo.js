@@ -1,5 +1,5 @@
 const { ApolloServer } = require('apollo-server-express');
-const { ApolloServerPluginDrainHttpServer } = require('apollo-server-core');
+const { ApolloServerPluginDrainHttpServer, ApolloServerPluginLandingPageGraphQLPlayground } = require('apollo-server-core');
 const http = require('http');
 const port = process.env.port || process.env.PORT;
 
@@ -13,7 +13,10 @@ async function startApolloServer(typeDefs, resolvers, app) {
                 user: req.user || null,
             };
         },
-        plugins: [ApolloServerPluginDrainHttpServer({ httpServer })]
+        plugins: [
+            ApolloServerPluginDrainHttpServer({ httpServer }),
+            ApolloServerPluginLandingPageGraphQLPlayground()
+        ]
     });
 
     await server.start();
